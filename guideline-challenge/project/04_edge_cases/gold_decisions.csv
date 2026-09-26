@@ -1,14 +1,16 @@
 sample_id,decision_id,expected,severity,rationale
-BDD12,d01,count=0 (không vẽ box),major,Ảnh negative không có đầu đèn giao thông xe cơ giới hợp lệ trong phạm vi nhìn rõ
-BDD12,d02,ignore_pedestrian_signal,minor,Bỏ qua các đèn tín hiệu người đi bộ hoặc biển báo nhỏ ở xa
-BDD24,d01,label=traffic_light,major,Nhận diện đúng đầu đèn giao thông trên cao trong điều kiện tuyết rơi
-BDD24,d02,color=red,critical,Đèn đỏ đang bật trong trời tuyết; bắt buộc nhận diện đúng màu đỏ để xe dừng an toàn
-BDD24,d03,relevance=ego_lane,critical,Đèn trực tiếp điều khiển làn xe đang đi; bắt buộc không được gán nhầm other_lane
-BDD24,d04,geometry: box ôm sát thân vỏ đèn nhìn thấy dung sai ≤ 2 px,minor,Khung bao chữ nhật bám sát mép vỏ đèn nhìn thấy không bị tuyết bám làm lệch
-BDD15,d01,label=traffic_light,major,Nhận diện đúng đầu đèn giao thông tại ngã tư
-BDD15,d02,relevance=ambiguous,major,Góc nhìn chéo và không rõ vạch kẻ phân làn điều khiển; kiểm tra khả năng escalate của peer
-BDD15,d03,color=green hoặc color=unknown,minor,Xác định đúng trạng thái nguồn sáng hoặc chọn unknown nếu bị tán xạ ánh sáng
-BDD13,d01,label=traffic_light,major,Gán nhãn đầu đèn giao thông chính diện phía trước
-BDD13,d02,color=green,major,Đèn xanh đang sáng rõ ban ngày
-BDD13,d03,relevance=ego_lane,critical,Đèn xanh điều khiển trực tiếp làn xe chủ; cho phép xe tiếp tục hành trình an toàn
-BDD13,d04,geometry: 1 box riêng cho từng đầu đèn không vẽ gộp,minor,Mỗi đầu đèn vẽ 1 box hình chữ nhật riêng biệt ôm khít mép ngoài
+BDD02,d01,"count=2 (hai hop den tren hinh)",major,Anh co 2 dau den giao thong rieng biet tren gia treo - moi dau den ve 1 box rieng
+BDD02,d02,"color=green",major,Ca hai dau den dang sang xanh ro rang ban ngay - annotator bat buoc phai chon green
+BDD02,d03,"relevance=ego_lane",critical,Den thang huong di chuyen cua xe; sai sang other_lane la loi nghiem trong
+BDD02,d04,"geometry: box am sat than vo den dung sai <= 2px",minor,Khung bao sat mep vo den nhin thay khong bo thua khoang troi
+BDD18,d01,"label=traffic_light",major,Nhan dien dung dau den giao thong ban dem - den sang sang o phai anh
+BDD18,d02,"color=red",critical,Den do dang bat trong canh ban dem; sai sang unknown la loi nang vi nhin ro mau
+BDD18,d03,"relevance=ego_lane",critical,Den dieu khien truc tiep lan xe dang di; sai sang other_lane anh huong safety
+BDD18,d04,"geometry: ve om sat bong sang khong bao trum quang sang choi",minor,Ban dem chi ve om nguon sang hinh tron khong lan ra vung sang loa xung quanh
+BDD15,d01,"label=traffic_light",major,Nhan dien dung dau den giao thong tai nga tu
+BDD15,d02,"relevance=ambiguous",major,Goc nhin cheo va khong ro vach ke phan lan dieu khien; kiem tra kha nang escalate cua peer
+BDD15,d03,"color=green hoac color=unknown",minor,Xac dinh dung trang thai nguon sang hoac chon unknown neu bi tan xa anh sang
+BDD13,d01,"label=traffic_light",major,Gan nhan dau den giao thong chinh dien phia truoc
+BDD13,d02,"color=green",major,Den xanh dang sang ro ban ngay
+BDD13,d03,"relevance=ego_lane",critical,Den xanh dieu khien truc tiep lan xe chu; cho phep xe tiep tuc hanh trinh an toan
+BDD13,d04,"geometry: 1 box rieng cho tung dau den khong ve gop",minor,Moi dau den ve 1 box hinh chu nhat rieng biet am khat mep ngoai
