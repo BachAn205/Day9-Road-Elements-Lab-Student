@@ -1,13 +1,13 @@
 sample_id,split,tags,reason
-BDD02,example,normal,City street / partly cloudy / day - den xanh ro 3 huong dung lam worked example
-BDD18,example,normal,City street / clear / night - ban dem den do ben phai ro
-BDD26,example,normal,City street / clear / night - ban dem nhieu den xanh + do phia truoc
+BDD12,example,normal,City street / overcast / day - anh ngay thuong cho TV1 lam minh hoa guideline
+BDD24,example,edge,City street / snowy / day - minh hoa edge case tuyet trong guideline examples
+BDD13,example,normal,City street / clear / day - minh hoa anh ngay nang ro rang
 BDD17,calibration,low_visibility,City street / rainy / day - mua lam mo den kiem tra rule unknown
 BDD25,calibration,low_visibility,City street / clear / dawn-dusk - chap choang kho phan biet mau den
 BDD07,calibration,normal,City-highway / clear / day - den xanh + vang o nga tu kiem tra geometry
 BDD21,calibration,normal,Highway / overcast / day - den nho o xa kiem tra small-far case
-BDD11,calibration,normal,City street / overcast / day - NEGATIVE: khong co den GT de calibrate truong hop khong label
-BDD12,blind,normal,City street / overcast / day - NEGATIVE case gui peer kiem tra scope
-BDD24,blind,edge,City street / snowy / day - tuyet hiem gap kiem tra scope guideline
-BDD15,blind,edge;ambiguity,City street / clear / day - khong ro den GT kiem tra relevance ambiguous
-BDD13,blind,critical,City street / clear / day - NEGATIVE truoc nga tu den xe cuoi dong
+BDD11,calibration,normal,City street / overcast / day - NEGATIVE khong co den GT calibrate truong hop khong label
+BDD02,blind,edge;normal,City street / partly cloudy / day - nhieu dau den kiem tra geometry va count
+BDD18,blind,edge;critical,City street / clear / night - ban dem den do critical sai relevance anh huong safety
+BDD26,blind,ambiguity,City street / clear / night - ban dem nhieu den kho phan biet ego vs other lane
+BDD15,blind,critical,City street / clear / day - highway Israel khong co den GPS kiem tra scope
