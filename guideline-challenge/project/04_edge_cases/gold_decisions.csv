@@ -1,16 +1,18 @@
 sample_id,decision_id,expected,severity,rationale
-BDD02,d01,"count=2 (hai hop den tren hinh)",major,Anh co 2 dau den giao thong rieng biet tren gia treo - moi dau den ve 1 box rieng
-BDD02,d02,"color=green",major,Ca hai dau den dang sang xanh ro rang ban ngay - annotator bat buoc phai chon green
-BDD02,d03,"relevance=ego_lane",critical,Den thang huong di chuyen cua xe; sai sang other_lane la loi nghiem trong
-BDD02,d04,"geometry: box am sat than vo den dung sai <= 2px",minor,Khung bao sat mep vo den nhin thay khong bo thua khoang troi
-BDD18,d01,"label=traffic_light",major,Nhan dien dung dau den giao thong ban dem - den sang sang o phai anh
-BDD18,d02,"color=red",critical,Den do dang bat trong canh ban dem; sai sang unknown la loi nang vi nhin ro mau
-BDD18,d03,"relevance=ego_lane",critical,Den dieu khien truc tiep lan xe dang di; sai sang other_lane anh huong safety
-BDD18,d04,"geometry: ve om sat bong sang khong bao trum quang sang choi",minor,Ban dem chi ve om nguon sang hinh tron khong lan ra vung sang loa xung quanh
-BDD15,d01,"label=traffic_light",major,Nhan dien dung dau den giao thong tai nga tu
-BDD15,d02,"relevance=ambiguous",major,Goc nhin cheo va khong ro vach ke phan lan dieu khien; kiem tra kha nang escalate cua peer
-BDD15,d03,"color=green hoac color=unknown",minor,Xac dinh dung trang thai nguon sang hoac chon unknown neu bi tan xa anh sang
-BDD13,d01,"label=traffic_light",major,Gan nhan dau den giao thong chinh dien phia truoc
-BDD13,d02,"color=green",major,Den xanh dang sang ro ban ngay
-BDD13,d03,"relevance=ego_lane",critical,Den xanh dieu khien truc tiep lan xe chu; cho phep xe tiep tuc hanh trinh an toan
-BDD13,d04,"geometry: 1 box rieng cho tung dau den khong ve gop",minor,Moi dau den ve 1 box hinh chu nhat rieng biet am khat mep ngoai
+BDD02,d01,count>=3 (it nhat 3 hop den),major,Anh NYC ngay co nhieu dau den tren gia long mon va cot 2 phia - phai ve rieng tung hop
+BDD02,d02,color=green cho tat ca dau den nhin thay,major,Tat ca dau den dang sang xanh ro ban ngay - bat buoc chon green khong de unknown
+BDD02,d03,relevance=ego_lane cho den chinh dien,critical,Den tren gia long mon thang huong xe la ego_lane - sai sang other_lane la loi nghiem trong
+BDD02,d04,relevance=other_lane cho den ben canh lech huong,major,Den tren cot 2 ben ria duong huong ve lan reu trai/phai la other_lane
+BDD02,d05,geometry: box am sat vo den dung sai <=2px,minor,Ve om sat mep vo den khong bao trum troi cot cay
+BDD18,d01,count=2 (den do phai + den xanh xa),major,Dem chinh xac 2 dau den nhin thay: den do tren cot phai gan + den xanh nho xa phia truoc
+BDD18,d02,color=red cho den cot phai,critical,Den do tren cot phai dang bat ro rang - phan biet duoc voi den xe sau - phai chon red khong de unknown
+BDD18,d03,color=green cho den xa phia truoc,major,Den nho xanh phia xa nhin thay duoc - chon green neu du tin tuong hoac unknown neu qua nho
+BDD18,d04,relevance=ego_lane cho den do cot phai,critical,Den do dieu khien truc tiep lan xe dang di - sai sang other_lane la loi an toan nghiem trong
+BDD18,d05,geometry: ve om sat nguon sang khong lan ra quang choi,minor,Ban dem chi ve om bong sang khong bao trum vung sang loa xung quanh
+BDD26,d01,count=2 (den xanh trai + den do/xanh phai),major,Anh dem co den xanh tren cot trai va den khac tren cot phai - 2 box rieng biet
+BDD26,d02,color=green cho den cot trai,major,Den xanh to ro rang tren cot trai - chon green chinh xac
+BDD26,d03,color=red cho den cot phai,major,Den do nho tren cot phai ben duong - chon red
+BDD26,d04,relevance=ego_lane cho den cot trai thang huong,critical,Den xanh cot trai dieu khien lan chinh xe dang di thang - ego_lane
+BDD26,d05,relevance=ambiguous neu khong ro lan,minor,Neu khong xac dinh duoc den cot phai dieu khien lan nao thi chon ambiguous
+BDD15,d01,count=0 (khong co den GT),major,Highway Israel khong co den giao thong trong pham vi nhin thay - khong duoc ve bat ky box nao
+BDD15,d02,ignore: den duong pho va bien bao,minor,Cac cot den duong pho va bien bao xanh chi dan duong la out-of-scope - bo qua hoan toan
