@@ -1,0 +1,16 @@
+sample_id,label,measure,an,Nam,tung,agree
+BDD07,traffic_light,count,5,6,4,0
+BDD07,traffic_light,attr:color,green|green|unknown|unknown|unknown,green|green|unknown|unknown|unknown|unknown,green|green|unknown|unknown,0
+BDD07,traffic_light,attr:relevance,ego_lane|ego_lane|ego_lane|ego_lane|ego_lane,ambiguous|ego_lane|ego_lane|other_lane|other_lane|other_lane,ego_lane|other_lane|other_lane|other_lane,0
+BDD11,traffic_light,count,0,1,0,0
+BDD11,traffic_light,attr:color,,red,,0
+BDD11,traffic_light,attr:relevance,,other_lane,,0
+BDD17,traffic_light,count,3,2,1,0
+BDD17,traffic_light,attr:color,green|green|unknown,green|unknown,red,0
+BDD17,traffic_light,attr:relevance,ego_lane|ego_lane|ego_lane,ego_lane|ego_lane,ambiguous,0
+BDD21,traffic_light,count,2,2,1,0
+BDD21,traffic_light,attr:color,unknown|unknown,green|green,green,0
+BDD21,traffic_light,attr:relevance,ego_lane|ego_lane,ego_lane|ego_lane,ego_lane,0
+BDD25,traffic_light,count,3,3,3,1
+BDD25,traffic_light,attr:color,green|green|green,green|green|green,green|green|green,1
+BDD25,traffic_light,attr:relevance,ego_lane|ego_lane|ego_lane,ego_lane|ego_lane|ego_lane,ambiguous|ambiguous|ambiguous,0

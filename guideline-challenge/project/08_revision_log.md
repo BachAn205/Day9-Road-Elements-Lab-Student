@@ -9,3 +9,4 @@ Cột Version ghi dạng `v1`, `v2`, `v3` — `make status` tìm dòng bảng c�
 | Version | Đổi gì | Vì sao | Bằng chứng |
 |---|---|---|---|
 | v1 | Hoàn thành bản thảo quy tắc gán nhãn ban đầu (10 mục) | Thiết lập bộ quy chuẩn cho nhận diện đèn giao thông và tính liên quan làn xe | Khởi tạo ban đầu, khớp với 01_problem_statement.md |
+| v2 | Bổ sung quy tắc tách cụm đèn đa hướng và quy tắc mờ nhòe do nước mưa | Khắc phục bất đồng về số lượng box và thuộc tính trong đợt đo lường calibration | BDD07, BDD17, 06_calibration_report.csv |

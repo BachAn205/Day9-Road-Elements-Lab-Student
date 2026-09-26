@@ -1,1 +1,4 @@
 sample_id,item,values_by_annotator,diagnosis,action,rule_change
+BDD07,box_count_and_relevance,an=5_ego_all;Nam=6_mixed;tung=4_mixed,guideline_gap,revise_rule,Quy định rõ cụm đèn đa hướng ở ngã tư phải tách thành từng box riêng và gán other_lane cho đầu đèn quay sang đường giao cắt
+BDD17,color_and_relevance_rain,an=green_ego;Nam=green_unknown;tung=red_ambiguous,data_ambiguity,add_escalation,Khi trời mưa nước nhòe kính chắn gió không rõ nguồn sáng bắt buộc chọn color=unknown và relevance=ambiguous
+BDD11,box_count_negative_case,an=0;Nam=1;tung=0,execution_error,coaching,Nhắc nhở annotator phân biệt kỹ đèn xe cơ giới với đèn người đi bộ và nguồn sáng phụ để không vẽ nhầm ở negative sample
