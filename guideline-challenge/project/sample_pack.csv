@@ -9,5 +9,5 @@ BDD21,calibration,normal,Highway / overcast / day - den nho o xa kiem tra small-
 BDD11,calibration,normal,City street / overcast / day - NEGATIVE: khong co den GT de calibrate truong hop khong label
 BDD12,blind,normal,City street / overcast / day - NEGATIVE case gui peer kiem tra scope
 BDD24,blind,edge,City street / snowy / day - tuyet hiem gap kiem tra scope guideline
-BDD15,blind,ambiguity,City street / clear / day - khong ro den GT kiem tra relevance ambiguous
+BDD15,blind,edge;ambiguity,City street / clear / day - khong ro den GT kiem tra relevance ambiguous
 BDD13,blind,critical,City street / clear / day - NEGATIVE truoc nga tu den xe cuoi dong

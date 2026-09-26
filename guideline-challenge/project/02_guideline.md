@@ -1,7 +1,7 @@
 # Sổ quy tắc gán nhãn — Trạng thái và Tính liên quan của Đèn giao thông
 *(Annotation Guideline — Traffic Light State and Ego Relevance)*
 
-**Version:** v1
+**Version:** v2
 
 ---
 
