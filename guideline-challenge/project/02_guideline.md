@@ -1,7 +1,7 @@
 # Sổ quy tắc gán nhãn — Trạng thái và Tính liên quan của Đèn giao thông
 *(Annotation Guideline — Traffic Light State and Ego Relevance)*
 
-**Version:** v2
+**Version:** v3
 
 ---
 
@@ -116,13 +116,13 @@ Sau khi vẽ xong khung chữ nhật, bạn **bắt buộc phải kiểm tra và
 
 ## 9. Bảng ví dụ minh họa (Examples)
 
-Dưới đây là 3 trường hợp điển hình trong tập ảnh mẫu để người gán nhãn đối chiếu:
+Dưới đây là 3 trường hợp điển hình trong tập ảnh mẫu (split example) để người gán nhãn đối chiếu:
 
 | Sample ID | Tình huống trong ảnh | Kết quả cần vẽ (Expected output) | Quy tắc áp dụng |
 |---|---|---|---|
-| `BDD02` | Đường phố ban ngày (`city street`, mây nhẹ). Có cụm đèn treo trên giá ngang và cột bên phải. | Vẽ 2 khung riêng biệt cho 2 hộp đèn nhìn rõ: cả hai đều gán `color = green` và `relevance = ego_lane`. | Mỗi hộp đèn vẽ 1 khung riêng; đèn thẳng hướng xe mình là `ego_lane`. |
-| `BDD13` | Ngã tư ban ngày nắng rõ (`clear daytime`), có hộp đèn đi thẳng và hộp đèn rẽ trái riêng. | Vẽ 2 khung riêng: Box 1 (đi thẳng) chọn `relevance = ego_lane`; Box 2 (rẽ trái) chọn `relevance = other_lane`. | Tách biệt rõ ràng làn xe chủ và làn rẽ khác; không vẽ gộp. |
-| `BDD18` | Đường phố ban đêm (`night`). Đèn đỏ trên cao phát sáng giữa trời tối. | Vẽ 1 khung ôm lấy nguồn sáng đèn đỏ và mép vỏ đèn nhìn thấy; gán `color = red`, `relevance = ego_lane`. | Ban đêm vẽ sát bóng đèn, không vẽ lan ra quầng sáng chói; nhận diện đúng đèn đỏ. |
+| `BDD12` | Đường phố ban ngày nhiều mây (`overcast`). Chỉ có cột đèn chiếu sáng và biển báo, không có đèn giao thông cơ giới. | **Không vẽ bất kỳ box nào** (count = 0). | Negative case: Đèn đường, biển báo thuộc out-of-scope $\rightarrow$ bỏ qua hoàn toàn. |
+| `BDD24` | Đường đô thị tuyết rơi (`snowy`). Đèn đỏ trên cao phát sáng rõ giữa nền trời trắng sáng. | Vẽ 1 khung ôm lấy thân vỏ đèn nhìn thấy; gán `color = red`, `relevance = ego_lane`. | Nhận diện đúng đèn đỏ trong thời tiết tuyết; ôm sát mép vỏ đèn dung sai $\le 2$ px. |
+| `BDD13` | Ngã tư ban ngày nắng rõ (`clear daytime`), có cụm đèn đi thẳng và đèn rẽ riêng. | Vẽ 2 khung riêng: Box 1 (thẳng hướng xe) chọn `relevance = ego_lane`; Box 2 (rẽ lệch hướng) chọn `relevance = other_lane`. | Không vẽ gộp 2 đầu đèn vào 1 box; phân biệt rõ làn xe chủ và làn rẽ khác. |
 
 ---
 

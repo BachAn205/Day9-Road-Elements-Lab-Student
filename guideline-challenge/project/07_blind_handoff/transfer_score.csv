@@ -1,0 +1,18 @@
+sample_id,decision_id,expected,severity,kind,peer_evidence,correct,note
+BDD02,d01,count>=3 (it nhat 3 hop den),major,decision,traffic_light [color=green;relevance=ego_lane]×3,1,Peer vẽ đủ 3 hộp đèn trên giá long môn
+BDD02,d02,color=green cho tat ca dau den nhin thay,major,decision,traffic_light [color=green;relevance=ego_lane]×3,1,Đúng màu green cho các đầu đèn nhìn thấy
+BDD02,d03,relevance=ego_lane cho den chinh dien,critical,decision,traffic_light [color=green;relevance=ego_lane]×3,1,Đúng ego_lane cho đèn chính diện
+BDD02,d04,relevance=other_lane cho den ben canh lech huong,major,decision,traffic_light [color=green;relevance=ego_lane]×3,0,Peer để mặc định ego_lane cho cả đèn làn rẽ do guideline v2 chưa nêu rõ ảnh hưởng của hướng mũi tên
+BDD02,d05,geometry: box am sat vo den dung sai <=2px,minor,geometry,traffic_light [color=green;relevance=ego_lane]×3,1,Box ôm sát vỏ đèn đạt dung sai <= 2px
+BDD18,d01,count=2 (den do phai + den xanh xa),major,decision,traffic_light [color=green;relevance=ego_lane]×2,1,Đếm đúng 2 đầu đèn nhìn thấy ban đêm
+BDD18,d02,color=red cho den cot phai,critical,decision,traffic_light [color=green;relevance=ego_lane]×2,0,Peer nhận diện nhầm màu đỏ thành green do chói sáng ban đêm
+BDD18,d03,color=green cho den xa phia truoc,major,decision,traffic_light [color=green;relevance=ego_lane]×2,1,Đúng màu green cho đèn ở xa phía trước
+BDD18,d04,relevance=ego_lane cho den do cot phai,critical,decision,traffic_light [color=green;relevance=ego_lane]×2,1,Đúng ego_lane cho làn xe đang di chuyển
+BDD18,d05,geometry: ve om sat nguon sang khong lan ra quang choi,minor,geometry,traffic_light [color=green;relevance=ego_lane]×2,1,Box ban đêm ôm khít nguồn sáng không lan ra quầng sáng
+BDD26,d01,count=2 (den xanh trai + den do/xanh phai),major,decision,traffic_light [color=green;relevance=ego_lane],0,Peer bỏ sót đèn trên cột bên phải do nền trời tối và góc nhìn xa
+BDD26,d02,color=green cho den cot trai,major,decision,traffic_light [color=green;relevance=ego_lane],1,Đúng màu green cho đèn cột bên trái
+BDD26,d03,color=red cho den cot phai,major,decision,traffic_light [color=green;relevance=ego_lane],0,Bỏ sót đèn cột phải
+BDD26,d04,relevance=ego_lane cho den cot trai thang huong,critical,decision,traffic_light [color=green;relevance=ego_lane],1,Đúng ego_lane cho đèn chính diện hướng đi
+BDD26,d05,relevance=ambiguous neu khong ro lan,minor,decision,traffic_light [color=green;relevance=ego_lane],0,Không đánh giá được đèn phụ do bỏ sót
+BDD15,d01,count=0 (khong co den GT),major,decision,traffic_light [color=unknown;relevance=ego_lane]×2,0,Peer vẽ nhầm đèn chiếu sáng hoặc biển báo thành đèn giao thông
+BDD15,d02,ignore: den duong pho va bien bao,minor,decision,traffic_light [color=unknown;relevance=ego_lane]×2,0,Peer không bỏ qua đèn đường ngoài scope mà gán color=unknown
