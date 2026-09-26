@@ -1,0 +1,37 @@
+[
+	{
+		"name": "traffic_sign",
+		"color": "#D93A32",
+		"type": "rectangle",
+		"attributes": [
+			{
+				"name": "sign_group",
+				"mutable": false,
+				"input_type": "select",
+				"default_value": "__undefined__",
+				"values": ["__undefined__", "prohibitory", "mandatory", "danger", "priority", "information", "supplementary", "unknown"]
+			},
+			{
+				"name": "ego_relevant",
+				"mutable": false,
+				"input_type": "select",
+				"default_value": "relevant",
+				"values": ["relevant", "not_relevant", "uncertain"]
+			},
+			{
+				"name": "visibility",
+				"mutable": false,
+				"input_type": "select",
+				"default_value": "clear",
+				"values": ["clear", "partial", "poor"]
+			},
+			{
+				"name": "needs_review",
+				"mutable": false,
+				"input_type": "checkbox",
+				"default_value": "false",
+				"values": ["false"]
+			}
+		]
+	}
+]
