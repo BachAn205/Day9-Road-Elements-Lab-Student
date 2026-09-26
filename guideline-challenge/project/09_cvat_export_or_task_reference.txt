@@ -1,8 +1,13 @@
-CVAT task reference — thay mọi placeholder mới là xong.
+CVAT task reference — điền sau khi tạo task thực tế trên CVAT trong buổi lab.
 
-CVAT version: TODO
-Task calibration (tên, id): TODO
-Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: TODO
-File export đã nộp (đường dẫn trong repo): TODO
-Guideline version dán trong Guide của task: TODO
-Ghi chú cho người tiếp nhận: TODO
+CVAT version: (chạy `make cvat-status` hoặc `py lab9.py cvat` để lấy version chính xác)
+Task calibration (tên, id): traffic-light-calib-v1 / (id ghi sau khi tạo xong trên CVAT)
+Task bản cuối theo guideline v3 (tên, id): traffic-light-blind-v3 / (điền sau khi freeze và handoff)
+File export đã nộp (đường dẫn trong repo): project/06_calibration_exports/<tên_thành_viên>.zip
+Guideline version dán trong Guide của task: v1 (calibration) → v2 (sau calibration) → v3 (blind handoff)
+Ghi chú cho người tiếp nhận:
+  - Upload ảnh từ build/calibration/ (7 ảnh) cho task calibration
+  - Upload ảnh từ build/blind/ (5 ảnh) cho task blind (chỉ sau khi freeze gold)
+  - Dán nội dung 02_guideline.md vào ô Guide của task CVAT
+  - Dán nội dung 03_cvat_labels.json vào tab Raw của Label Editor
+  - Thêm tất cả thành viên nhóm vào task với role Annotator

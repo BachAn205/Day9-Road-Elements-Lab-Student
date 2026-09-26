@@ -1,1 +1,13 @@
 sample_id,split,tags,reason
+BDD02,example,normal,City street / partly cloudy / daytime - anh tieu chuan ngay nang cho TV1 lam minh hoa guideline
+BDD13,example,normal,City street / clear / daytime - anh dep nhat de ve worked example den xanh ro rang
+BDD18,example,normal,City street / clear / night - minh hoa dieu kien ban dem cho phan Examples trong guideline
+BDD04,calibration,normal,City street / partly cloudy / daytime - baseline cung loai voi BDD02 de do inter-annotator
+BDD10,calibration,normal,City street / partly cloudy / daytime - goc nhin nga tu khac BDD04 de kiem tra consistency
+BDD11,calibration,normal,City street / overcast / daytime - may che kiem tra kha nang nhan biet mau den
+BDD15,calibration,normal,City street / clear / daytime - anh sang tot nhat kiem tra geometry bounding box
+BDD17,calibration,low_visibility,City street / rainy / daytime - mua lam mo den kiem tra rule unknown vs xac dinh
+BDD12,blind,normal,City street / overcast / daytime - case thong thuong gui nhom peer
+BDD24,blind,edge,City street / snowy / daytime - dieu kien tuyet hiem gap kiem tra scope guideline
+BDD25,blind,ambiguity,City street / clear / dawn-dusk - anh sang chap choang kho phan biet mau den va relevance
+BDD26,blind,critical,City street / clear / night - ban dem den nho mo sai relevance anh huong safety

@@ -1,6 +1,6 @@
 # Annotation guideline — TODO tên bài toán
 
-**Version:** v0
+**Version:** v1
 
 <!--
 v0 = chưa có bản nháp. Đổi dòng Version ở trên thành v1 khi xong bản nháp đầu, v2 sau calibration, v3 sau blind
@@ -26,8 +26,29 @@ TODO — rectangle / polyline / polygon; tight, visible hay amodal; đặt đi�
 
 ## 4. Taxonomy
 
-TODO — class hierarchy; cái gì là class, cái gì là attribute; allowed values; default và khi nào dùng `unknown`.
-Bảng đầy đủ ở `03_ontology_and_cvat_setup.md` — hai nơi phải khớp nhau.
+Có **1 class duy nhất**: `traffic_light`. Mỗi bộ đèn vật lý = 1 bounding box. Bảng đầy đủ ở `03_ontology_and_cvat_setup.md` — hai nơi phải khớp nhau.
+
+### Attribute: `color` — trạng thái màu đèn đang hiển thị
+
+| Giá trị | Dùng khi |
+|---|---|
+| `red` | Đèn đỏ đang sáng rõ |
+| `yellow` | Đèn vàng đang sáng rõ |
+| `green` | Đèn xanh đang sáng rõ |
+| `off` | Tất cả đèn tắt (mất điện, ngoài giờ hoạt động) |
+| `unknown` | Bị che, loá, quá nhỏ để đọc màu, hoặc không chắc chắn |
+
+**Default**: `unknown`. Annotator phải chủ động chọn màu — để nguyên default là lỗi.
+
+### Attribute: `relevance` — đèn điều khiển làn nào
+
+| Giá trị | Dùng khi |
+|---|---|
+| `ego_lane` | Đèn trực tiếp điều khiển làn xe đang đi (lane chính giữa hướng camera) |
+| `other_lane` | Đèn của làn vuông góc, làn ngược chiều, hoặc làn bên cạnh rõ ràng |
+| `ambiguous` | Không xác định được đèn này điều khiển làn nào |
+
+**Default**: `ego_lane`. Đổi sang `other_lane` khi đèn rõ ràng hướng về luồng giao thông khác.
 
 ## 5. Inclusion / exclusion
 

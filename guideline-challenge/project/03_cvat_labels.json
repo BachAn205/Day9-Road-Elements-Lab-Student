@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "name": "traffic_light",
+    "color": "#FF0000",
+    "type": "rectangle",
+    "attributes": [
+      {
+        "name": "color",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "unknown",
+        "values": ["red", "yellow", "green", "off", "unknown"]
+      },
+      {
+        "name": "relevance",
+        "mutable": false,
+        "input_type": "select",
+        "default_value": "ego_lane",
+        "values": ["ego_lane", "other_lane", "ambiguous"]
+      }
+    ]
+  }
+]
